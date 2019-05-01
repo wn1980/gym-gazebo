@@ -70,15 +70,14 @@ catkin_init_workspace
 # sudo pip2 install pymavlink MAVProxy catkin_pkg --upgrade
 # echo "\nDependencies installed\n"
 
-
 # Import and build dependencies
 cd ../../catkin_ws/src/
 vcs import < ../../gazebo.repos
 
 cd ..
-catkin_make --pkg mav_msgs
-source devel/setup.bash
-catkin_make -j 1
+#catkin_make --pkg mav_msgs
+#source devel/setup.bash
+catkin_make -j1
 bash -c 'echo source `pwd`/devel/setup.bash >> ~/.bashrc'
 echo "## ROS workspace compiled ##"
 
